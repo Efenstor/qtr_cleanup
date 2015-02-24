@@ -11,7 +11,7 @@ from lxml import etree
 # To move files to trash instead of deletion download and install Send2Trash
 # from https://github.com/hsoft/send2trash or do "pip install Send2Trash",
 # after that set "send2trash = True" in the line below
-send2trash = True
+send2trash = False
 if send2trash:
   from send2trash import send2trash
 
