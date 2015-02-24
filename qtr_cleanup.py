@@ -67,9 +67,7 @@ for t in tracks.findall("track"):
 
 # List through the files
 dirlist = os.listdir(directory.text)
-for f in dirlist:
-  fabs = os.path.abspath(f)
-  path,fname = os.path.split(fabs)
+for fname in dirlist:
   name,ext = os.path.splitext(fname)
   found = 0
   if ext == midi_ext:
@@ -102,13 +100,14 @@ for f in dirlist:
 
   # Delete or ignore
   if found == 1:
-    print("DELETING \""+f+"\"")
+    print("DELETING \""+fname+"\"")
+    fabs = directory.text+'/'+fname
     if send2trash:
       send2trash(fabs)
     else:
       os.remove(fabs)
   elif found == 2:
-    print("IGNORING \""+f+"\"")
+    print("IGNORING \""+fname+"\"")
 
 print("Done!\n")
 
