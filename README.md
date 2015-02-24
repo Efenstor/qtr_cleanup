@@ -1,7 +1,9 @@
 # qtr_cleanup
 ### Qtractor project directory clean-up utility
 
-It is a small Python utility that deletes all MIDI, wave, peak and curve files unreferred in a Qtractor project file from its directory, as far as this functionality is currently missing in the Qtractor itself (the Cleanup option in the file list only cleans up the project file itself, not its directory).
+It is a small Python utility that deletes all MIDI, wave, peak and curve files unreferred in a Qtractor project file from its directory, as far as this functionality is currently missing in the Qtractor itself.
+
+The Cleanup option in the file list context menu only cleans up the project itself of redundant references, while the project directory actually remains full of junk files.
 
 ### Usage
 **[python] folder_cleanup.py \<FILENAME\>**
